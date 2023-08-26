@@ -11,7 +11,23 @@ namespace CSharpfndamentals
             Console.WriteLine("I'm inside the method");
         }
 
-        
+        // Method defualt constructor used to initialize variable
+        String name;
+        String lastname;
+        public Program1(String name)
+        {
+            this.name = name;
+        }
+
+        public Program1(String name, String lastname)
+        {
+            this.lastname = lastname;
+        }
+
+        public void getName()
+        {
+            Console.WriteLine("My name is " + this.name + " " +this.lastname);
+        }
 
 
         static void Main(String[] args)
@@ -33,9 +49,12 @@ namespace CSharpfndamentals
             height = "hello";
             Console.WriteLine($"Height is {height}");
 
-            Program1 p = new Program1();
+            Program1 p = new Program1("Wayne");
+            Program1 p1 = new Program1("Wayne", "Chipchase");
             p.getData();
             p.setData();
+            p.getName();
+            p1.getName();
         }
     }
 }
