@@ -1,14 +1,18 @@
-﻿using System;
+﻿using CsharpFndamentals;
+using System;
 using System.Diagnostics;
 
 namespace CSharpfndamentals
 {
-    class Program1
+    class Program1 : Program4  //inheritance
     {
         public void getData()
         {
             Console.WriteLine("I'm inside the method");
         }
+
+        
+
 
         static void Main(String[] args)
         {
@@ -31,6 +35,7 @@ namespace CSharpfndamentals
 
             Program1 p = new Program1();
             p.getData();
+            p.setData();
         }
     }
 }
