@@ -3,8 +3,13 @@ using System.Diagnostics;
 
 namespace CSharpfndamentals
 {
-    class Program
+    class Program1
     {
+        public void getData()
+        {
+            Console.WriteLine("I'm inside the method");
+        }
+
         static void Main(String[] args)
         {
             Console.WriteLine("Hello, World!");
@@ -23,6 +28,9 @@ namespace CSharpfndamentals
             Console.WriteLine($"Height is {height}");
             height = "hello";
             Console.WriteLine($"Height is {height}");
+
+            Program1 p = new Program1();
+            p.getData();
         }
     }
 }
