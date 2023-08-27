@@ -20,12 +20,17 @@ namespace LearnSelenium
             //WebDriverManager = compatible chromedriver.exe
             new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();  //maximizes browser window
         }
 
         [Test]
         public void Test1()
         {
-            driver.Url = "https://rahulshettyacademy.com/#/index";
+            driver.Url = "https://rahulshettyacademy.com/loginpagePractise/";
+            TestContext.Progress.WriteLine(driver.Title);
+            TestContext.Progress.WriteLine(driver.Url);
+            driver.Close();  // 1 window closes
+            //driver.Quit();  //use for 2 windows or more
         }
     }
 }
